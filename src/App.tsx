@@ -9,10 +9,11 @@ const footer: [string, [string, string][]][] = [
     'Contact',
     [
       ['GitHub', 'https://github.com/scsupercraft'],
+      ['Discord', 'https://discord.gg/kwsf3AKHab'],
       ['Email', 'mailto:contact@scsupercraft.dev'],
     ],
   ],
-  ['Support', [['Ko-Fi', 'https://ko-fi.com/scsupercraft']]],
+  ['Support Me', [['Ko-Fi', 'https://ko-fi.com/scsupercraft']]],
 ];
 
 function App() {
