@@ -1,7 +1,5 @@
 import './App.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { TypographyH1 } from '@/components/ui/text';
-import { Construction } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 const footer: [string, [string, string][]][] = [
@@ -14,37 +12,28 @@ const footer: [string, [string, string][]][] = [
     ],
   ],
   ['Support Me', [['Ko-Fi', 'https://ko-fi.com/scsupercraft']]],
+  [
+    'Other',
+    [
+      ['Maven Repo', 'https://maven.scsupercraft.dev'],
+      [
+        'CurseForge',
+        'https://www.curseforge.com/members/scsupercraft/projects',
+      ],
+      ['Modrinth', 'https://modrinth.com/user/SCsupercraft'],
+    ],
+  ],
 ];
 
-function App() {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <ThemeProvider>
-      <Layout>
-        <div className="flex justify-center items-center h-full">
-          <Construction
-            size={'2.25rem'}
-            color="yellow"
-          ></Construction>
-          <TypographyH1 className="ml-2 mr-2">
-            Under construction, check back later!
-          </TypographyH1>
-          <Construction
-            size={'2.25rem'}
-            color="yellow"
-          ></Construction>
-        </div>
-      </Layout>
+      <span className="flex flex-col h-dvh">
+        <Header />
+        <span className="site-content">{children}</span>
+        <Footer />
+      </span>
     </ThemeProvider>
-  );
-}
-
-function Layout({ children }: { children: ReactNode }) {
-  return (
-    <span className="flex flex-col h-dvh">
-      <Header />
-      <span className="site-content">{children}</span>
-      <Footer />
-    </span>
   );
 }
 
@@ -62,7 +51,7 @@ function Header() {
           />
         </div>
         <p className="font-semibold text-3xl text-center leading-none m-0">
-          SCsupercraft.dev
+          SCsupercraft
         </p>
       </a>
     </header>
@@ -97,5 +86,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default App;
