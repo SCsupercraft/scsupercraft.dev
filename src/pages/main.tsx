@@ -110,6 +110,10 @@ const Projects: ProjectInfo[] = [
   },
 ];
 
+const kineticHosting = 'https://billing.kinetichosting.com/aff.php?aff=804';
+const kineticHostingImg =
+  'https://media.forgecdn.net/attachments/description/964524/description_c4498f87-c591-4c60-b305-711d198cc3f8.png';
+
 function App() {
   return (
     <Layout>
@@ -122,6 +126,36 @@ function App() {
           Builder, or CFB for short. It's a Minecraft modpack with a unique
           concept and design, where you build factories in a map-based world,
           completing quests and research to unlock new items.
+        </TypographyP>
+        <TypographyH2>Kinetic Hosting</TypographyH2>
+        <TypographyP className="lg:max-w-[70%]">
+          Currently, I'm partnered with{' '}
+          <a
+            href={kineticHosting}
+            target="_blank"
+            rel="noopener"
+            className="text-blue-400"
+          >
+            Kinetic Hosting
+          </a>{' '}
+          to provide you with high-quality hosting services! If you are you
+          looking for a server host with powerful hardware, 24/7 support, and an
+          easy-to-use admin panel, then Kinetic Hosting is the right choice for
+          you. To take advantage of a great deal when purchasing a server from
+          Kinetic Hosting, you can use the discount code "CFB". Simply enter the
+          code "CFB" during the purchase process and enjoy 15% off the first
+          month.
+          <a
+            href={kineticHosting}
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src={kineticHostingImg}
+              alt="Use code CFB for 15% your first month!"
+              className="m-3"
+            />
+          </a>
         </TypographyP>
         <TypographyH2>My Projects</TypographyH2>
         <TypographyP>
